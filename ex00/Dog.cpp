@@ -6,7 +6,7 @@
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 12:06:53 by hshimizu          #+#    #+#             */
-/*   Updated: 2024/04/26 14:43:31 by hshimizu         ###   ########.fr       */
+/*   Updated: 2024/04/26 15:29:44 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,11 @@ Dog::~Dog(void) {
 }
 
 Dog& Dog::operator=(const Dog& other) {
-  std::cout << "Dog assignment" << std::endl;
-  Animal::operator=(other);
+  if (this != &other) {
+    std::cout << "Dog assignment" << std::endl;
+    Animal::operator=(other);
+  } else
+    std::cout << "Warning: self-assignment" << std::endl;
   return *this;
 }
 

@@ -6,7 +6,7 @@
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 08:54:59 by hshimizu          #+#    #+#             */
-/*   Updated: 2024/04/26 14:43:21 by hshimizu         ###   ########.fr       */
+/*   Updated: 2024/04/26 15:29:38 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,11 @@ WrongAnimal::~WrongAnimal(void) {
 }
 
 WrongAnimal &WrongAnimal::operator=(const WrongAnimal &other) {
-  std::cout << "WrongAnimal assignment " << _type << std::endl;
-  _type = other._type;
+  if (this != &other) {
+    std::cout << "WrongAnimal assignment " << _type << std::endl;
+    _type = other._type;
+  } else
+    std::cout << "Warning: self-assignment" << std::endl;
   return *this;
 }
 
