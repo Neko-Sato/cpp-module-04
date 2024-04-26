@@ -6,14 +6,14 @@
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 19:37:00 by hshimizu          #+#    #+#             */
-/*   Updated: 2024/04/26 19:48:36 by hshimizu         ###   ########.fr       */
+/*   Updated: 2024/04/26 22:24:52 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
+#include "Character.hpp"
 #include "Cure.hpp"
 #include "Ice.hpp"
-#include "Character.hpp"
 #include "MateriaSource.hpp"
 
 int main() {
