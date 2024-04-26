@@ -6,7 +6,7 @@
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 08:54:59 by hshimizu          #+#    #+#             */
-/*   Updated: 2024/04/26 15:30:04 by hshimizu         ###   ########.fr       */
+/*   Updated: 2024/04/26 15:32:26 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,7 @@ Animal &Animal::operator=(const Animal &other) {
   if (this != &other) {
     std::cout << "Animal assignment " << _type << std::endl;
     _type = other._type;
-  } else
-    std::cout << "Warning: self-assignment" << std::endl;
+  }
   return *this;
 }
 
